@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>ALl people</title>
+</head>
+<body>
+<p th:text="${people}">List: </p>
+
+<div th:each="person : ${people}">
+  <a th:href="@{/people/{id}(id=${person.getId()})}" th:text="${person.getName()}">user</a>
+
+</div>
+<br/>
+<a href="people/new">New person</a>
+</body>
+</html>
